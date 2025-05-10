@@ -8,9 +8,9 @@ import car2 from "../../public/img/f0d8352b-6762-465a-a17b-e92c2f4538b6 1.svg";
 export function Hero() {
   return (
     <section className="bg-[#1D1B201F] w-full relative">
-      <div className="flex flex-row w-full flex-grow md:flex-row h-[125vh]">
+      <div className="flex flex-col xl:flex-row w-full flex-grow h-[125vh]">
         {/* Sidebar Navigation */}
-        <div className="px-[42px] py-[62px] w-[50%] bg-[#6A6A6A]">
+        <div className="px-[42px] py-[62px] w-[50%] bg-[#6A6A6A] hidden xl:block">
           <p className="font-inter text-[6.5vw] leading-[7.5vw]  space-x-1 bg-gradient-to-r from-white to-[#757575] text-transparent bg-clip-text">
             Data
           </p>
@@ -32,13 +32,16 @@ export function Hero() {
         </div>
 
         {/* Main Hero Content */}
-        <div className="flex flex-col relative flex-grow w-[50%]">
+        <div className="flex flex-col relative flex-grow xl:w-[50%]">
           <div className="h-[65%] w-full bg-[var(--State-Layers-On-Surface-Opacity-12,#1D1B201F)] flex justify-center items-center">
             <div className="w-full relative flex flex-col items-end h-full mt-[30vh] mr-[3vw]">
-              <h1 className="text-[128px] bg-[radial-gradient(50%_50%_at_50%_50%,#000000_0%,#233501_100%)] bg-clip-text text-transparent mb-6">
+              <h1 className="xl:text-[7vw] text-[128px] bg-[radial-gradient(50%_50%_at_50%_50%,#000000_0%,#233501_100%)] bg-clip-text text-transparent mb-6">
                 CarImagery
               </h1>
               <MainBigBtn />
+            </div>
+            <div className="block xl:hidden">
+              <Image src={car2} alt="car2" className="absolute left-[100px]" />
             </div>
           </div>
           <div className="h-[35%] w-full bg-white pt-[60px] pl-8 flex flex-col">
@@ -58,7 +61,7 @@ export function Hero() {
           <Image
             src={car2}
             alt="car2"
-            className="absolute bottom-[-80px] left-[100px]"
+            className="absolute bottom-[-80px] left-[100px] hidden xl:block"
           />
         </div>
       </div>
@@ -66,7 +69,7 @@ export function Hero() {
         <Image
           src={car1}
           alt="car1"
-          className="absolute top-[-10vh]"
+          className="absolute top-[-10vh] hidden md:w-[40%] xl:w-[35%] xl:block "
           height={900}
         />
       </div>

@@ -1,28 +1,35 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
-import { usePathname } from "next/navigation"
-import Image from "next/image"
+import { useState } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const pathname = usePathname()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const isActive = (path: string) => {
-    return pathname === path ? "text-gray-900 font-medium" : "text-gray-500 hover:text-gray-900"
-  }
+    return pathname === path
+      ? "text-gray-900 font-medium"
+      : "text-gray-500 hover:text-gray-900";
+  };
 
   return (
-    <div className="border-b bg-white top-0 z-50">
-      <div className="container mx-auto px-4 fixed flex items-center justify-between">
+    <div className="fixed top-0 left-0 right-0 z-50 border-b bg-white h-16">
+      <div className="container mx-auto px-4 flex h-full items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             {/* <div className="h-5 w-5 bg-gray-800 rounded flex items-center justify-center">
               <span className="text-white text-xs">C</span>
             </div> */}
-            <Image src="../public/img/Block.svg" alt="CarImagery Logo" width={20} height={20} />
+            <Image
+              src="../public/img/Block.svg"
+              alt="CarImagery Logo"
+              width={20}
+              height={20}
+            />
             <span className="font-medium">CarImagery</span>
           </Link>
         </div>
@@ -51,7 +58,11 @@ export default function Header() {
           <Button variant="outline" size="sm" asChild>
             <Link href="/login">Log in</Link>
           </Button>
-          <Button size="sm" className="bg-gray-900 text-white hover:bg-gray-800" asChild>
+          <Button
+            size="sm"
+            className="bg-gray-900 text-white hover:bg-gray-800"
+            asChild
+          >
             <Link href="/signup">Sign up</Link>
           </Button>
         </div>
@@ -67,7 +78,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t">
+        <div className="xl:hidden fixed top-16 inset-x-0 bottom-0 bg-white z-40 overflow-y-auto border-t">
           <div className="container mx-auto px-4 py-4 space-y-5">
             <nav className="flex flex-col space-y-3">
               <Link
@@ -112,7 +123,11 @@ export default function Header() {
                   Log in
                 </Link>
               </Button>
-              <Button size="sm" className="bg-gray-900 text-white hover:bg-gray-800" asChild>
+              <Button
+                size="sm"
+                className="bg-gray-900 text-white hover:bg-gray-800"
+                asChild
+              >
                 <Link href="/signup" onClick={() => setMobileMenuOpen(false)}>
                   Sign up
                 </Link>
@@ -122,5 +137,5 @@ export default function Header() {
         </div>
       )}
     </div>
-  )
+  );
 }

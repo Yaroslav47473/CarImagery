@@ -16,7 +16,7 @@ export function Header() {
           <span className="font-bold text-[48px]">CarImagery</span>
         </div>
         <div className="flex items-center gap-2">
-          <nav className="hidden md:flex items-center space-x-6 text-sm">
+          <nav className="hidden xl:flex items-center space-x-6 text-sm">
             <Link
               href="/dashboard"
               className="text-[#1E1E1E] hover:bg-[#F0F0F0] z-10"
