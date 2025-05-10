@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { MainBtn } from "./MainBtn";
 import Image from "next/image";
-import logo from "../../public/img/logo.png"
+import logo from "../../public/img/logo.png";
 
 export function Header() {
   return (
@@ -11,28 +11,34 @@ export function Header() {
           <div className="rounded flex items-center justify-center">
             {/* <span className="text-white text-xs">C</span>
              */}
-            <Image src={logo} alt="CarImagery Logo"/>
+            <Image src={logo} alt="CarImagery Logo" />
           </div>
           <span className="font-bold text-[48px]">CarImagery</span>
         </div>
         <div className="flex items-center gap-2">
-          <nav className="hidden md:flex items-center space-x-6 mr-6 text-[20px]">
-            <Link href="#" className="text-[#1E1E1E] hover:text-gray-900">
+          <nav className="hidden md:flex items-center space-x-6 text-sm">
+            <Link
+              href="/dashboard"
+              className="text-[#1E1E1E] hover:bg-[#F0F0F0] z-10"
+            >
+              Dashboard
+            </Link>
+            <Link href="#" className="text-[#1E1E1E] hover:bg-[#F0F0F0] z-10">
               Products
             </Link>
-            <Link href="#" className="text-[#1E1E1E] hover:text-gray-900">
+            <Link href="#" className="text-[#1E1E1E] hover:bg-[#F0F0F0] z-10">
               Our Company
             </Link>
-            <Link href="#" className="text-[#1E1E1E] hover:text-gray-900">
+            <Link href="#" className="text-[#1E1E1E] hover:bg-[#F0F0F0] z-10">
               Contact Us Form
             </Link>
-            <Link href="#" className="text-[#1E1E1E] hover:text-gray-900">
+            <Link href="#" className="text-[#1E1E1E] hover:bg-[#F0F0F0] z-10">
               Documentation
             </Link>
-            <Link href="#" className="text-[#1E1E1E] hover:text-gray-900">
+            <Link href="#" className="text-[#1E1E1E] hover:bg-[#F0F0F0] z-10">
               Pricing
             </Link>
-            <Link href="#" className="text-[#1E1E1E] hover:text-gray-900">
+            <Link href="#" className="text-[#1E1E1E] hover:bg-[#F0F0F0] z-10">
               Support
             </Link>
           </nav>

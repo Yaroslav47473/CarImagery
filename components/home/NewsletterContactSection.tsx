@@ -22,7 +22,7 @@ export function NewsletterContactSection() {
           </div>
 
           {/* Contact */}
-          <div className="flex justify-self-end flex-col">
+          <div className="flex flex-col px-20">
             <h2 className="text-[48px] mb-6">Contact & Support</h2>
             <div className="space-y-3">
               <div className="flex text-[28px] items-center gap-2">
