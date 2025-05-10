@@ -15,8 +15,8 @@ export default function Header() {
   }
 
   return (
-    <header className="border-b bg-white sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+    <header className="border-b bg-white top-0 z-50">
+      <div className="container mx-auto px-4 fixed flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <div className="h-5 w-5 bg-gray-800 rounded flex items-center justify-center">
@@ -67,7 +67,7 @@ export default function Header() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t">
-          <div className="container mx-auto px-4 py-4 space-y-4">
+          <div className="container mx-auto px-4 py-4 space-y-5">
             <nav className="flex flex-col space-y-3">
               <Link
                 href="/catalog"

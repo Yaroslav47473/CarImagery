@@ -4,8 +4,8 @@ import { MainBtn } from "./MainBtn";
 export function Header() {
   return (
     <header className="border-b bg-white w-full">
-      <div className="px-4 py-[32px] flex items-center justify-between w-full">
-        <div className="flex items-center gap-2">
+      <div className="px-4 py-[20px] flex items-center justify-between w-full">
+        <div className="p-left-[20px]0 flex items-center gap-2">
           <div className="h-5 w-5 bg-gray-800 rounded flex items-center justify-center">
             <span className="text-white text-xs">C</span>
           </div>

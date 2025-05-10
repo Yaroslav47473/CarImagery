@@ -1,70 +1,18 @@
-import Image from "next/image"
-import { Mail, Phone } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import { Mail, Phone } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/layout/Header";
+import { Hero } from "@/components/home/Hero";
+import { BlogSection } from "@/components/home/BlogSection";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header */}
+      {/* <Header /> */}
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gray-200">
-          <div className="container mx-auto">
-            <div className="flex flex-col md:flex-row">
-              {/* Sidebar Navigation */}
-              <div className="w-full md:w-64 p-8 space-y-4">
-                <h2 className="text-4xl font-bold text-gray-700">Data Stock</h2>
-                <h2 className="text-4xl font-bold text-gray-700">CarImagery Views</h2>
-                <h2 className="text-4xl font-bold text-gray-700">Cars</h2>
-                <h2 className="text-4xl font-bold text-gray-700">API</h2>
-              </div>
-
-              {/* Main Hero Content */}
-              <div className="flex-1 relative">
-                <div className="relative h-[400px] md:h-[500px]">
-                  {/* Top view car */}
-                  <div className="absolute top-0 left-0 right-0 flex justify-center">
-                    <Image
-                      src="/placeholder.svg?height=300&width=500"
-                      alt="Top view of a white car"
-                      width={500}
-                      height={300}
-                      className="object-contain"
-                    />
-                  </div>
-
-                  {/* Red sports car */}
-                  <div className="absolute bottom-0 left-0">
-                    <Image
-                      src="/placeholder.svg?height=200&width=400"
-                      alt="Red sports car"
-                      width={400}
-                      height={200}
-                      className="object-contain"
-                    />
-                  </div>
-
-                  {/* White box with content */}
-                  <div className="absolute top-0 right-0 bottom-0 bg-white w-full md:w-[350px] p-6">
-                    <h1 className="text-3xl font-bold text-amber-800 mt-4">CarImagery</h1>
-                    <h2 className="text-xl font-medium mt-4">The Best Solution for Car Images</h2>
-                    <p className="text-sm mt-2 text-gray-700">
-                      Find high-quality car stock images at your fingertips. Get the perfect images when you need them.
-                      Fast and reliable car images.
-                    </p>
-                    <div className="mt-4 flex gap-2">
-                      <Button variant="outline" className="bg-white">
-                        Try for Free
-                      </Button>
-                      <Button className="bg-gray-900 text-white hover:bg-gray-800">Get Started</Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Hero />
 
         {/* Features Section */}
         <section className="py-12 bg-white">
@@ -79,7 +27,8 @@ export default function Home() {
                 </div>
                 <h3 className="font-semibold mb-2">High-Resolution</h3>
                 <p className="text-sm text-gray-600">
-                  We've got high-quality, high-resolution images of cars from every angle. Perfect for your projects.
+                  We've got high-quality, high-resolution images of cars from
+                  every angle. Perfect for your projects.
                 </p>
               </div>
 
@@ -89,7 +38,8 @@ export default function Home() {
                 </div>
                 <h3 className="font-semibold mb-2">24/7 Support</h3>
                 <p className="text-sm text-gray-600">
-                  Our team is available around the clock to help with any questions or issues you might have.
+                  Our team is available around the clock to help with any
+                  questions or issues you might have.
                 </p>
               </div>
 
@@ -99,7 +49,8 @@ export default function Home() {
                 </div>
                 <h3 className="font-semibold mb-2">Full Flexibility</h3>
                 <p className="text-sm text-gray-600">
-                  Choose from various angles, models, and formats to suit your specific needs.
+                  Choose from various angles, models, and formats to suit your
+                  specific needs.
                 </p>
               </div>
 
@@ -109,7 +60,8 @@ export default function Home() {
                 </div>
                 <h3 className="font-semibold mb-2">Customer Dashboard</h3>
                 <p className="text-sm text-gray-600">
-                  Manage your account, downloads, and preferences through our intuitive dashboard.
+                  Manage your account, downloads, and preferences through our
+                  intuitive dashboard.
                 </p>
               </div>
 
@@ -119,7 +71,8 @@ export default function Home() {
                 </div>
                 <h3 className="font-semibold mb-2">Various Functions</h3>
                 <p className="text-sm text-gray-600">
-                  From simple downloads to API integration, we offer a range of functions to meet your needs.
+                  From simple downloads to API integration, we offer a range of
+                  functions to meet your needs.
                 </p>
               </div>
             </div>
@@ -165,51 +118,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Author Section */}
-        <section className="py-6 bg-gray-300">
-          <div className="container mx-auto px-4">
-            <p className="text-gray-600">Yaroslav Khrystych</p>
-          </div>
-        </section>
-
         {/* Blog Section */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold mb-8">Check Out our Blog's and Help</h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <div className="border rounded-lg overflow-hidden">
-                <div className="h-40 bg-gray-200"></div>
-                <div className="p-4">
-                  <h3 className="font-semibold mb-2">Title</h3>
-                  <p className="text-sm text-gray-600">
-                    Find high-quality car stock images at your fingertips. Get the perfect images when you need them.
-                  </p>
-                </div>
-              </div>
-
-              <div className="border rounded-lg overflow-hidden">
-                <div className="h-40 bg-gray-200"></div>
-                <div className="p-4">
-                  <h3 className="font-semibold mb-2">Title</h3>
-                  <p className="text-sm text-gray-600">
-                    Find high-quality car stock images at your fingertips. Get the perfect images when you need them.
-                  </p>
-                </div>
-              </div>
-
-              <div className="border rounded-lg overflow-hidden">
-                <div className="h-40 bg-gray-200"></div>
-                <div className="p-4">
-                  <h3 className="font-semibold mb-2">Title</h3>
-                  <p className="text-sm text-gray-600">
-                    Find high-quality car stock images at your fingertips. Get the perfect images when you need them.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <BlogSection />
 
         {/* Newsletter & Contact Section */}
         <section className="py-12 bg-gray-100">
@@ -220,7 +130,9 @@ export default function Home() {
                 <h2 className="text-2xl font-bold mb-6">Stay Up-to-Date</h2>
                 <div className="flex gap-2">
                   <Input placeholder="Email address" className="bg-white" />
-                  <Button className="bg-gray-900 text-white hover:bg-gray-800">Submit</Button>
+                  <Button className="bg-gray-900 text-white hover:bg-gray-800">
+                    Submit
+                  </Button>
                 </div>
               </div>
 
@@ -309,7 +221,14 @@ export default function Home() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      ry="5"
+                    ></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                   </svg>
@@ -389,20 +308,9 @@ export default function Home() {
                 <li>Contact</li>
               </ul>
             </div>
-
-            <div>
-              <h3 className="font-semibold mb-4">Follow</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>Twitter</li>
-                <li>LinkedIn</li>
-                <li>Facebook</li>
-                <li>YouTube</li>
-                <li>Instagram</li>
-              </ul>
-            </div>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }

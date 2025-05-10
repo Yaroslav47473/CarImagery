@@ -1,5 +1,9 @@
 import { Button } from "@/components/ui/button";
 
+interface MainBtnProps {
+  classname:  string
+}
+
 export function MainBtn() {
   return (
     <div className="flex items-center gap-3">
