@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { usePathname } from "next/navigation"
-
+import Image from "next/image"
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
@@ -15,13 +15,14 @@ export default function Header() {
   }
 
   return (
-    <header className="border-b bg-white top-0 z-50">
+    <div className="border-b bg-white top-0 z-50">
       <div className="container mx-auto px-4 fixed flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <div className="h-5 w-5 bg-gray-800 rounded flex items-center justify-center">
+            {/* <div className="h-5 w-5 bg-gray-800 rounded flex items-center justify-center">
               <span className="text-white text-xs">C</span>
-            </div>
+            </div> */}
+            <Image src="../public/img/Block.svg" alt="CarImagery Logo" width={20} height={20} />
             <span className="font-medium">CarImagery</span>
           </Link>
         </div>
@@ -120,6 +121,6 @@ export default function Header() {
           </div>
         </div>
       )}
-    </header>
+    </div>
   )
 }

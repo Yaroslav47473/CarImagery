@@ -1,158 +1,30 @@
 import Image from "next/image";
-import { Mail, Phone } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/home/Hero";
+import { FeaturesSection } from "@/components/home/FeaturesSection";
+import { StatsSection } from "@/components/home/StatsSection";
 import { BlogSection } from "@/components/home/BlogSection";
+import { NewsletterContactSection } from "@/components/home/NewsletterContactSection";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* <Header /> */}
+      <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <Hero />
 
         {/* Features Section */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-xl font-semibold mb-2">heading</h2>
-            <p className="text-sm text-gray-500 mb-8">subheading</p>
-
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-              <div className="p-6 border rounded-lg">
-                <div className="w-8 h-8 rounded-full border flex items-center justify-center mb-4">
-                  <span className="text-sm">01</span>
-                </div>
-                <h3 className="font-semibold mb-2">High-Resolution</h3>
-                <p className="text-sm text-gray-600">
-                  We've got high-quality, high-resolution images of cars from
-                  every angle. Perfect for your projects.
-                </p>
-              </div>
-
-              <div className="p-6 border rounded-lg">
-                <div className="w-8 h-8 rounded-full border flex items-center justify-center mb-4">
-                  <span className="text-sm">02</span>
-                </div>
-                <h3 className="font-semibold mb-2">24/7 Support</h3>
-                <p className="text-sm text-gray-600">
-                  Our team is available around the clock to help with any
-                  questions or issues you might have.
-                </p>
-              </div>
-
-              <div className="p-6 border rounded-lg">
-                <div className="w-8 h-8 rounded-full border flex items-center justify-center mb-4">
-                  <span className="text-sm">03</span>
-                </div>
-                <h3 className="font-semibold mb-2">Full Flexibility</h3>
-                <p className="text-sm text-gray-600">
-                  Choose from various angles, models, and formats to suit your
-                  specific needs.
-                </p>
-              </div>
-
-              <div className="p-6 border rounded-lg">
-                <div className="w-8 h-8 rounded-full border flex items-center justify-center mb-4">
-                  <span className="text-sm">04</span>
-                </div>
-                <h3 className="font-semibold mb-2">Customer Dashboard</h3>
-                <p className="text-sm text-gray-600">
-                  Manage your account, downloads, and preferences through our
-                  intuitive dashboard.
-                </p>
-              </div>
-
-              <div className="p-6 border rounded-lg">
-                <div className="w-8 h-8 rounded-full border flex items-center justify-center mb-4">
-                  <span className="text-sm">05</span>
-                </div>
-                <h3 className="font-semibold mb-2">Various Functions</h3>
-                <p className="text-sm text-gray-600">
-                  From simple downloads to API integration, we offer a range of
-                  functions to meet your needs.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <FeaturesSection />
 
         {/* Stats Section */}
-        <section className="py-12 bg-gray-100">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="p-6 bg-white rounded-lg border text-center">
-                <div className="w-10 h-10 mx-auto rounded-full border flex items-center justify-center mb-4">
-                  <span className="text-sm">📊</span>
-                </div>
-                <h3 className="text-2xl font-bold">70,000+</h3>
-                <p>Images</p>
-              </div>
-
-              <div className="p-6 bg-white rounded-lg border text-center">
-                <div className="w-10 h-10 mx-auto rounded-full border flex items-center justify-center mb-4">
-                  <span className="text-sm">🚗</span>
-                </div>
-                <h3 className="text-2xl font-bold">10,000+</h3>
-                <p>Car Models</p>
-              </div>
-
-              <div className="p-6 bg-white rounded-lg border text-center">
-                <div className="w-10 h-10 mx-auto rounded-full border flex items-center justify-center mb-4">
-                  <span className="text-sm">😊</span>
-                </div>
-                <h3 className="text-2xl font-bold">100+</h3>
-                <p>Happy Customers</p>
-              </div>
-
-              <div className="p-6 bg-white rounded-lg border text-center">
-                <div className="w-10 h-10 mx-auto rounded-full border flex items-center justify-center mb-4">
-                  <span className="text-sm">⏱️</span>
-                </div>
-                <h3 className="text-2xl font-bold">99.9%</h3>
-                <p>Uptime</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <StatsSection />
 
         {/* Blog Section */}
         <BlogSection />
 
         {/* Newsletter & Contact Section */}
-        <section className="py-12 bg-gray-100">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {/* Newsletter */}
-              <div>
-                <h2 className="text-2xl font-bold mb-6">Stay Up-to-Date</h2>
-                <div className="flex gap-2">
-                  <Input placeholder="Email address" className="bg-white" />
-                  <Button className="bg-gray-900 text-white hover:bg-gray-800">
-                    Submit
-                  </Button>
-                </div>
-              </div>
-
-              {/* Contact */}
-              <div>
-                <h2 className="text-2xl font-bold mb-6">Contact & Support</h2>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <Mail className="h-5 w-5" />
-                    <span>support@carimagery.com</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    <span>+1 (234) 567-8901</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <NewsletterContactSection />
       </main>
 
       {/* Footer */}
@@ -165,7 +37,7 @@ export default function Home() {
                 <div className="h-5 w-5 bg-gray-800 rounded flex items-center justify-center">
                   <span className="text-white text-xs">C</span>
                 </div>
-                <span className="font-medium">CarImagery</span>
+                <span className="font-medium text-[24px]">CarImagery</span>
               </div>
 
               {/* Social Media Icons */}

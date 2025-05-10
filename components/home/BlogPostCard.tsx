@@ -10,9 +10,9 @@ interface BlogPostCardProps {
 
 export function BlogPostCard({ title, description }: BlogPostCardProps) {
   return (
-    <div className="border rounded-lg overflow-hidden flex flex-row">
+    <div className=" w-[30%] border rounded-lg overflow-hidden flex flex-row">
       <div className="h-40 p-5 bg-gray-200 w-[50%] flex justify-center items-center">
-        <Image src={backimg} alt="back" className="w-[100%] h-[100%]"/>
+        <Image src={backimg} alt="back" className="w-[100%] h-[100%]" />
       </div>
       {/* Placeholder for image */}
       <div className="p-4 w-[50%]">
